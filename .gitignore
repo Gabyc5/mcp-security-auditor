@@ -6,3 +6,4 @@ reports/*.json
 !reports/.gitkeep
 .venv/
 *.egg-info/
+"TECHNICAL_REFERENCE.md" 

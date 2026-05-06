@@ -49,14 +49,13 @@ def check_no_auth(client: MCPClient) -> CheckResult:
     try:
         tools = client.list_tools()
         if tools:
-            tool_names = ', '.join(t['name'] for t in tools)
             findings.append(Finding(
                 check_id="AUTH-001",
                 title="Tools enumerable without authentication",
                 severity=Severity.HIGH,
                 description=(
                     f"Successfully enumerated {len(tools)} tools without any credentials. "
-                    f"Tool names: {tool_names}. "
+                    f"Tool names: {', '.join(t['name'] for t in tools)}. "
                     "An attacker can map the entire attack surface."
                 ),
                 evidence=f"Discovered {len(tools)} tools",
