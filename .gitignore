@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+reports/*.md
+reports/*.json
+!reports/.gitkeep
+.venv/
+*.egg-info/

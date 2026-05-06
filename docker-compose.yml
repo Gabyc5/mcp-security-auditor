@@ -1,0 +1,8 @@
+services:
+  vulnerable-server:
+    build: ./vulnerable-server
+    ports:
+      - "8080:8080"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
